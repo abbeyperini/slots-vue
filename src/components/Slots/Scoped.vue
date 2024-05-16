@@ -1,8 +1,9 @@
 <script setup>
+  import { ref } from "vue"
   const likeCount = ref(0);
-  const message = count < 10 ? "You love me!" : "You really love me!"
-  function likeCount() {
-    likeCount += 1;
+  const message = likeCount < 10 ? "You love me!" : "You really love me!"
+  function handleClick() {
+    likeCount.value += 1;
   }
 </script>
 <template>

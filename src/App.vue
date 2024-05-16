@@ -10,21 +10,22 @@ import SlotsList from './components/Slots/List.vue'
     <!-- <span>My Title</span> -->
   </SlotsDefault>
 
-  <SlotsNamed>
+  <!-- <SlotsNamed>
     <template #title>
       <span>My Title</span>
     </template>
+  </SlotsNamed> -->
+
     <!-- <p>Put me in, coach!</p> -->
     <!-- <template #default>
       <p>Put me in, coach!</p>
     </template> -->
-  </SlotsNamed>
 
-  <SlotsScoped v-slot="slotProps">
+  <!-- <SlotsScoped v-slot="slotProps">
     <h2>Likes</h2>
     <p>{{slotProps.number}}</p>
     <p>{{slotProps.message}}</p>
-  </SlotsScoped>
+  </SlotsScoped> -->
   <!-- <SlotsScoped>
     <template #default>
       <span>My Counter</span>

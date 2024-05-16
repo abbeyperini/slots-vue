@@ -1,5 +1,5 @@
 <template>
-  <div class="blog-list-container">
+  <div class="default-container">
     <h2>
       <slot>default</slot>
     </h2>
