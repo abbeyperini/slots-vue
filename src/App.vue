@@ -27,7 +27,7 @@ import SlotsScoped from './components/Slots/Scoped.vue'
   </SlotsScoped> -->
   <!-- <SlotsScoped>
     <template #default>
-      <span>My Counter</span>
+      <span>My Likes</span>
     </template>
     <template #display="{ number, message }">
       <p>{{ number }}</p>
