@@ -2,7 +2,6 @@
 import SlotsDefault from './components/Slots/Default.vue'
 import SlotsNamed from './components/Slots/Named.vue'
 import SlotsScoped from './components/Slots/Scoped.vue'
-import SlotsList from './components/Slots/List.vue'
 </script>
 
 <template>
@@ -23,21 +22,22 @@ import SlotsList from './components/Slots/List.vue'
 
   <!-- <SlotsScoped v-slot="slotProps">
     <h2>Likes</h2>
-    <p>{{slotProps.number}}</p>
-    <p>{{slotProps.message}}</p>
+    <p>{{ slotProps.number }}</p>
+    <p>{{ slotProps.message }}</p>
   </SlotsScoped> -->
   <!-- <SlotsScoped>
     <template #default>
       <span>My Counter</span>
     </template>
-    <template #display="{number, message}">
-      <p>{{number}}</p>
-      <p>{{message}}</p>
+    <template #display="{ number, message }">
+      <p>{{ number }}</p>
+      <p>{{ message }}</p>
     </template>
   </SlotsScoped> -->
 </template>
 
 <!-- <script setup>
+  import SlotsList from './components/Slots/List.vue'
   const products = [
     {
       name: "Socks",
@@ -53,11 +53,11 @@ import SlotsList from './components/Slots/List.vue'
 </script>
 <template>
   <SlotsList :listItems="products">
-    <template #item="{name, description, count}">
+    <template #item="{item}">
       <div class="product">
-        <h3>{{ name }}</h3>
-        <p>{{ description }}</p>
-        <span class="count">{{ count }}</span>
+        <h3>{{ item.name }}</h3>
+        <p>{{ item.description }}</p>
+        <span class="count">{{ item.count }}</span>
       </div>
     </template>
   </SlotsList>
