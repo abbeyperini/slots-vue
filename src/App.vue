@@ -1,3 +1,6 @@
+/*
+* Default, named, and scoped slots
+*/
 <script setup>
 import SlotsDefault from './components/Slots/Default.vue'
 import SlotsNamed from './components/Slots/Named.vue'
@@ -5,29 +8,49 @@ import SlotsScoped from './components/Slots/Scoped.vue'
 </script>
 
 <template>
-  <SlotsDefault>
-    <!-- <span>My Title</span> -->
-  </SlotsDefault>
+  <!--**Default**-->
+  <SlotsDefault></SlotsDefault>
+  
+  <!-- <SlotsDefault>
+    <span>To the Window</span>
+  </SlotsDefault> -->
 
+  <!--**Named**-->
   <!-- <SlotsNamed>
     <template #title>
-      <span>My Title</span>
+      <span>To the Window</span>
     </template>
   </SlotsNamed> -->
 
-    <!-- <p>Put me in, coach!</p> -->
-    <!-- <template #default>
-      <p>Put me in, coach!</p>
-    </template> -->
+  <!--**Named and Default**-->
+  <!-- <SlotsNamed>
+    <template #title>
+      <span>To the Window</span>
+    </template>
+    <p>to</p>
+    <p>The Wall</p>
+  </SlotsNamed> -->
 
+  <!-- <SlotsNamed>
+    <template #title>
+      <span>The Window</span>
+    </template>
+    <template #default>
+      <p>to</p>
+      <p>The Wall</p>
+    </template>
+  </SlotsNamed> -->
+
+  <!--**Scoped**-->
   <!-- <SlotsScoped v-slot="slotProps">
-    <h2>Likes</h2>
+    <h2>Shots</h2>
     <p>{{ slotProps.number }}</p>
     <p>{{ slotProps.message }}</p>
   </SlotsScoped> -->
+
   <!-- <SlotsScoped>
     <template #default>
-      <span>My Likes</span>
+      <span>Shots</span>
     </template>
     <template #display="{ number, message }">
       <p>{{ number }}</p>
@@ -36,23 +59,31 @@ import SlotsScoped from './components/Slots/Scoped.vue'
   </SlotsScoped> -->
 </template>
 
+/*
+* Dynamic List
+*/
 <!-- <script setup>
   import SlotsList from './components/Slots/List.vue'
-  const products = [
+  const shotsList = [
     {
-      name: "Socks",
-      description: "Luxury for your feet",
-      count: 12,
+      name: "Lemon drops",
+      description: "Citrusy",
+      count: 2,
     },
     {
-      name: "Hat",
-      description: "Wear it on your head",
-      count: 8
+      name: "Three Wise Men",
+      description: "Johnnie Walker, Jack Daniel, and Jim Beam",
+      count: 3
     },
-];
+    {
+      name: "Patron",
+      description: "On the rocks",
+      count: 4
+    },
+  ];
 </script>
 <template>
-  <SlotsList :listItems="products">
+  <SlotsList :listItems="shotsList">
     <template #item="{item}">
       <div class="product">
         <h3>{{ item.name }}</h3>
