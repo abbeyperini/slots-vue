@@ -49,11 +49,19 @@ import SlotsScoped from './components/Slots/Scoped.vue'
   </SlotsScoped> -->
 
   <!-- <SlotsScoped>
-    <template #default>
-      <span>Shots</span>
+    <template #default="slotProps">
+      <span>{{ slotProps.number }} Shots!</span>
     </template>
-    <template #display="{ number, message }">
-      <p>{{ number }}</p>
+    <template #display="slotProps">
+      <p>{{ slotProps.message }}</p>
+    </template>
+  </SlotsScoped> -->
+
+  <!-- <SlotsScoped>
+    <template #default="{ number }">
+      <span>{{ number }} Shots!</span>
+    </template>
+  <template #display="{ message }">
       <p>{{ message }}</p>
     </template>
   </SlotsScoped> -->
@@ -66,7 +74,7 @@ import SlotsScoped from './components/Slots/Scoped.vue'
   import SlotsList from './components/Slots/List.vue'
   const shotsList = [
     {
-      name: "Lemon drops",
+      name: "Lemon drop",
       description: "Citrusy",
       count: 2,
     },
@@ -84,8 +92,8 @@ import SlotsScoped from './components/Slots/Scoped.vue'
 </script>
 <template>
   <SlotsList :listItems="shotsList">
-    <template #item="{item}">
-      <div class="product">
+    <template #item="{ item }">
+      <div class="shot">
         <h3>{{ item.name }}</h3>
         <p>{{ item.description }}</p>
         <span class="count">{{ item.count }}</span>
