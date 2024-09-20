@@ -2,9 +2,10 @@
 * Default, named, and scoped slots
 */
 <script setup>
-import SlotsDefault from './components/Slots/Default.vue'
-import SlotsNamed from './components/Slots/Named.vue'
-import SlotsScoped from './components/Slots/Scoped.vue'
+import SlotsDefault from './components/Slots/Default.vue';
+import SlotsNamed from './components/Slots/Named.vue';
+import SlotsScoped from './components/Slots/Scoped.vue';
+import SlotsConditional from './components/Slots/Conditional.vue';
 </script>
 
 <template>
@@ -65,6 +66,10 @@ import SlotsScoped from './components/Slots/Scoped.vue'
       <p>{{ message }}</p>
     </template>
   </SlotsScoped> -->
+
+  <!-- <SlotsConditional>
+    <template #club v-if="false">The Club</template>
+  </SlotsConditional> -->
 </template>
 
 /*
