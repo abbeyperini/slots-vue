@@ -1,6 +1,7 @@
 <template>
-  <div class="default-container">
-    <h2><slot name="title">default</slot></h2>
-    <slot></slot>
+  <div class="club-container">
+    <slot name="window">The Window</slot>
+    <slot><img src="../../assets/confused-lil-jon.jpg" alt="lil jon saying 'what!?'" /></slot>
+    <slot name="wall">The Wall</slot>
   </div>
 </template>

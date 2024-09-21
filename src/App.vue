@@ -13,40 +13,54 @@ import SlotsConditional from './components/Slots/Conditional.vue';
   <SlotsDefault></SlotsDefault>
   
   <!-- <SlotsDefault>
-    <span>To the Window</span>
+    <img src="./assets/club-people.jpeg" alt="people in the club" />
   </SlotsDefault> -->
 
   <!--**Named**-->
   <!-- <SlotsNamed>
-    <template #title>
-      <span>To the Window</span>
+    <template #window>
+      <img src="./assets/the-window.jpg" alt="the window" />
+    </template>
+    <template #wall>
+      <img src="./assets/the-wall.png" alt="the wall" />
     </template>
   </SlotsNamed> -->
 
   <!--**Named and Default**-->
   <!-- <SlotsNamed>
-    <template #title>
-      <span>To the Window</span>
+    <template #window>
+      <img src="./assets/the-window.jpg" alt="the window" />
     </template>
-    <p>to</p>
-    <p>The Wall</p>
+    <template #wall>
+      <img src="./assets/the-wall.png" alt="the wall" />
+    </template>
+    <img src="./assets/club-people.jpeg" alt="people in the club" />
   </SlotsNamed> -->
 
   <!-- <SlotsNamed>
-    <template #title>
-      <span>The Window</span>
+    <template #window>
+      <img src="./assets/the-window.jpg" alt="the window" />
+    </template>
+    <template #wall>
+      <img src="./assets/the-wall.png" alt="the wall" />
     </template>
     <template #default>
-      <p>to</p>
-      <p>The Wall</p>
+      <img src="./assets/club-people.jpeg" alt="people in the club" />
     </template>
   </SlotsNamed> -->
+
+  <!--**Conditional**-->
+  <!-- <SlotsConditional>
+    <template #club v-if="true"><img src="./assets/club-people.jpeg" alt="people in the club" /></template>
+  </SlotsConditional> -->
 
   <!--**Scoped**-->
   <!-- <SlotsScoped v-slot="slotProps">
     <h2>Shots</h2>
-    <p>{{ slotProps.number }}</p>
-    <p>{{ slotProps.message }}</p>
+    <div class="flex-container">
+      <p>{{ slotProps.number }}</p>
+      <p>{{ slotProps.message }}</p>
+    </div>
   </SlotsScoped> -->
 
   <!-- <SlotsScoped>
@@ -66,10 +80,6 @@ import SlotsConditional from './components/Slots/Conditional.vue';
       <p>{{ message }}</p>
     </template>
   </SlotsScoped> -->
-
-  <!-- <SlotsConditional>
-    <template #club v-if="false">The Club</template>
-  </SlotsConditional> -->
 </template>
 
 /*
@@ -98,10 +108,10 @@ import SlotsConditional from './components/Slots/Conditional.vue';
 <template>
   <SlotsList :listItems="shotsList">
     <template #item="{ item }">
-      <div class="shot">
-        <h3>{{ item.name }}</h3>
-        <p>{{ item.description }}</p>
-        <span class="count">{{ item.count }}</span>
+      <div class="shots-container">
+        <p class="list-heading">{{ item.name }}</p>
+        <p>Description: {{ item.description }}</p>
+        <p class="count">Count: {{ item.count }}</p>
       </div>
     </template>
   </SlotsList>

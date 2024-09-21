@@ -6,7 +6,7 @@
 
 <template>
   <slot></slot>
-  <ul>
+  <ul class="list">
     <li v-for="listItem in listItems" :key="listItem.id">
       <slot name="item" :item="listItem"></slot>
     </li>
