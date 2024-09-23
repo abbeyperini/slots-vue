@@ -92,16 +92,19 @@ import SlotsConditional from './components/Slots/Conditional.vue';
       name: "Lemon drop",
       description: "Citrusy",
       count: 2,
+      id: 1,
     },
     {
       name: "Three Wise Men",
       description: "Johnnie Walker, Jack Daniel, and Jim Beam",
-      count: 3
+      count: 3,
+      id: 2,
     },
     {
       name: "Patron",
       description: "On the rocks",
-      count: 4
+      count: 4,
+      id: 3,
     },
   ];
 </script>
