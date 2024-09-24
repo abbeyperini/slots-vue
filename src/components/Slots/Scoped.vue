@@ -9,7 +9,7 @@
 <template>
   <div class="shots-container">
     <slot :number="shotCount" :message="message"></slot>
-    <!-- <h2><slot :number="shotCount">default</slot></h2>
+    <!-- <h2><slot :number="shotCount"></slot></h2>
     <slot name="display" :message="message"></slot> -->
     <button type="button" @click.prevent="handleClick">Take shot</button>
   </div>
