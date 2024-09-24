@@ -18,6 +18,9 @@ import SlotsConditional from './components/Slots/Conditional.vue';
 
   <!--**Named**-->
   <!-- <SlotsNamed>
+  </SlotsNamed> -->
+  
+  <!-- <SlotsNamed>
     <template #window>
       <img src="./assets/the-window.jpg" alt="the window" />
     </template>
@@ -51,7 +54,7 @@ import SlotsConditional from './components/Slots/Conditional.vue';
 
   <!--**Conditional**-->
   <!-- <SlotsConditional>
-    <template #club v-if="false"><img src="./assets/club-people.jpeg" alt="people in the club" /></template>
+    <template #club v-if="true"><img src="./assets/club-people.jpeg" alt="people in the club" /></template>
   </SlotsConditional> -->
 
   <!--**Scoped**-->
