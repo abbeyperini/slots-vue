@@ -6,7 +6,17 @@
   padding: 2rem;
   font-weight: normal;
   font-size: larger;
-  color: grey;
+  color: #0f0f0ff7;
+  text-align: center;
+}
+
+h2 {
+  font-size: 6em;
+}
+
+p {
+  font-size: 4rem;
+  margin: 1rem;
 }
 
 img {
@@ -14,27 +24,64 @@ img {
   margin: 1rem;
 }
 
+button {
+  max-width: 500px;
+  background-color: #FFD6FF;
+  color: #413D66;
+  font-size: 4rem;
+  border-radius: 6px;
+  border: 5px solid#413D66;
+  margin: 40px auto;
+  padding: 40px;
+  box-shadow: 8px 8px 4px 1px #413D66;
+  transition: all 200ms;
+}
+
+button:hover {
+  background-color: #413D66;
+  color: #f8f8f8;
+}
+
+button:active {
+  transform: translateY(9px) translateX(9px);
+  box-shadow: none;
+}
+
 .club-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .shots-container {
-  background-color: #52B2CF;
+  background-color: #B8C0FF;
   color: var(--vt-c-black-soft);
   padding: 2rem;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin: 1rem;
+  min-width: 800px;
 }
 
 .list {
   list-style-type: none;
 }
 
-.list-heading {
+.list-container {
+  background-color: #B8C0FF;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.list-container p {
   font-size: 2rem;
+}
+
+.list-heading {
+  font-size: 4rem;
   font-weight: bold;
 }
 

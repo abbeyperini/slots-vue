@@ -60,10 +60,8 @@ import SlotsConditional from './components/Slots/Conditional.vue';
   <!--**Scoped**-->
   <!-- <SlotsScoped v-slot="slotProps">
     <h2>Shots</h2>
-    <div class="flex-container">
-      <p>{{ slotProps.number }}</p>
-      <p>{{ slotProps.message }}</p>
-    </div>
+    <p>{{ slotProps.number }}</p>
+    <p>{{ slotProps.message }}</p>
   </SlotsScoped> -->
 
   <!-- <SlotsScoped>
@@ -114,8 +112,8 @@ import SlotsConditional from './components/Slots/Conditional.vue';
 <template>
   <SlotsList :listItems="shotsList">
     <template #item="{ item }">
-      <div class="shots-container">
-        <p class="list-heading">{{ item.name }}</p>
+      <div class="list-container">
+        <h3 class="list-heading">{{ item.name }}</h3>
         <p>Description: {{ item.description }}</p>
         <p class="count">Count: {{ item.count }}</p>
       </div>
