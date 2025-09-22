@@ -64,6 +64,7 @@ import SlotsConditional from './components/Slots/Conditional.vue';
     <p>{{ slotProps.message }}</p>
   </SlotsScoped> -->
 
+  <!--**From v-slot to name syntax**-->
   <!-- <SlotsScoped>
     <template #default="slotProps">
       <span>{{ slotProps.number }} Shots!</span>
